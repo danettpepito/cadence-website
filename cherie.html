@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CADENCE — Cherie</title>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="stage">
+
+  <!-- Background decorative SVG -->
+  <div class="bg-blob">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <!-- Deep maroon background -->
+      <rect width="1440" height="900" fill="#2a0d1e"/>
+      <!-- Subtle vignette -->
+      <radialGradient id="vig" cx="50%" cy="50%" r="70%">
+        <stop offset="0%" stop-color="#3d1228" stop-opacity="0"/>
+        <stop offset="100%" stop-color="#0f0409" stop-opacity="0.7"/>
+      </radialGradient>
+      <rect width="1440" height="900" fill="url(#vig)"/>
+      <!-- Soft glow behind character area -->
+      <radialGradient id="glow" cx="40%" cy="60%" r="30%">
+        <stop offset="0%" stop-color="#f060a0" stop-opacity="0.12"/>
+        <stop offset="100%" stop-color="#f060a0" stop-opacity="0"/>
+      </radialGradient>
+      <rect width="1440" height="900" fill="url(#glow)"/>
+      <!-- Diagonal accent lines -->
+      <g stroke="#f060a0" stroke-width="0.5" opacity="0.15">
+        <line x1="0" y1="200" x2="500" y2="900"/>
+        <line x1="60" y1="0" x2="560" y2="900"/>
+        <line x1="120" y1="0" x2="620" y2="900"/>
+      </g>
+      <!-- Small dots texture -->
+      <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+        <circle cx="16" cy="16" r="1" fill="#f060a0" opacity="0.12"/>
+      </pattern>
+      <rect width="500" height="900" fill="url(#dots)"/>
+    </svg>
+  </div>
+
+  <!-- LOGO -->
+  <div class="logo-area">
+    <!-- Swap img src for your logo PNG; fallback text shown below -->
+    <img src="cadence-logo.png" alt="CADENCE" 
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+    <span class="logo-fallback">CADENCE</span>
+  </div>
+
+  <!-- MEMBER NAV ICONS -->
+  <nav class="member-nav" aria-label="Member navigation">
+
+    <!-- CHERIE (active) -->
+    <a href="cadence-cherie.html" class="member-icon active" title="Cherie">
+      <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <rect width="44" height="44" fill="#2a0d1e"/>
+        <!-- Abstract Cherie icon: big curly hair silhouette, pink tones -->
+        <circle cx="22" cy="13" r="9" fill="#f9a8d4"/>
+        <!-- Curly hair puffs -->
+        <circle cx="14" cy="10" r="7" fill="#f060a0"/>
+        <circle cx="30" cy="10" r="7" fill="#f060a0"/>
+        <circle cx="10" cy="16" r="5" fill="#f060a0"/>
+        <circle cx="34" cy="16" r="5" fill="#f060a0"/>
+        <circle cx="22" cy="8"  r="8" fill="#f9a8d4"/>
+        <!-- Face -->
+        <ellipse cx="22" cy="20" rx="6" ry="7" fill="#fdd5b1"/>
+        <!-- Body hint -->
+        <path d="M14 34 Q22 28 30 34 L32 44 H12 Z" fill="#f060a0"/>
+        <!-- Plaid skirt hint -->
+        <path d="M12 38 L32 38 L34 44 H10 Z" fill="#e8b4cb"/>
+        <line x1="16" y1="38" x2="16" y2="44" stroke="#f060a0" stroke-width="1" opacity="0.6"/>
+        <line x1="20" y1="38" x2="20" y2="44" stroke="#f060a0" stroke-width="1" opacity="0.6"/>
+        <line x1="24" y1="38" x2="24" y2="44" stroke="#f060a0" stroke-width="1" opacity="0.6"/>
+        <line x1="28" y1="38" x2="28" y2="44" stroke="#f060a0" stroke-width="1" opacity="0.6"/>
+        <line x1="12" y1="41" x2="32" y2="41" stroke="#f060a0" stroke-width="1" opacity="0.4"/>
+      </svg>
+    </a>
+
+    <!-- MIKA -->
+    <a href="cadence-mika.html" class="member-icon" title="Mika">
+      <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <rect width="44" height="44" fill="#1a1a2e"/>
+        <!-- Mika: sleek dark hair, cool blue tones -->
+        <!-- Hair -->
+        <path d="M8 18 Q8 4 22 4 Q36 4 36 18 L36 22 Q34 14 22 14 Q10 14 8 22 Z" fill="#1a0a2e"/>
+        <!-- Hair sides -->
+        <rect x="8" y="14" width="5" height="20" rx="2" fill="#1a0a2e"/>
+        <rect x="31" y="14" width="5" height="20" rx="2" fill="#1a0a2e"/>
+        <!-- Face -->
+        <ellipse cx="22" cy="22" rx="10" ry="10" fill="#fce4c8"/>
+        <!-- Hair top -->
+        <path d="M12 14 Q22 6 32 14 Q28 8 22 8 Q16 8 12 14Z" fill="#1a0a2e"/>
+        <!-- Eyes -->
+        <ellipse cx="18" cy="21" rx="2" ry="2.5" fill="#1a0a2e"/>
+        <ellipse cx="26" cy="21" rx="2" ry="2.5" fill="#1a0a2e"/>
+        <!-- Outfit -->
+        <path d="M12 34 Q22 28 32 34 L34 44 H10 Z" fill="#60c8f0"/>
+        <!-- Collar detail -->
+        <path d="M18 34 L22 40 L26 34" fill="none" stroke="#fff" stroke-width="1.5"/>
+        <!-- Body shine -->
+        <ellipse cx="18" cy="36" rx="2" ry="3" fill="white" opacity="0.15"/>
+      </svg>
+    </a>
+
+    <!-- NADIA -->
+    <a href="cadence-nadia.html" class="member-icon" title="Nadia">
+      <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <rect width="44" height="44" fill="#1a0e0e"/>
+        <!-- Nadia: flowing side-parted hair, warm earthy with purple -->
+        <!-- Back hair -->
+        <path d="M12 14 Q10 30 12 44 H18 Q14 30 14 16 Z" fill="#2d1a0a"/>
+        <path d="M32 14 Q34 30 32 44 H26 Q30 30 30 16 Z" fill="#2d1a0a"/>
+        <!-- Face -->
+        <ellipse cx="22" cy="22" rx="10" ry="10" fill="#e8c49a"/>
+        <!-- Hair top -->
+        <path d="M11 16 Q12 4 22 5 Q34 4 33 16 Q28 8 22 9 Q16 8 11 16Z" fill="#3d2210"/>
+        <!-- Side part hair drape -->
+        <path d="M11 15 Q8 22 10 32 Q12 24 14 20 Z" fill="#3d2210"/>
+        <!-- Eyes -->
+        <ellipse cx="18.5" cy="21" rx="1.8" ry="2" fill="#1a0a0a"/>
+        <ellipse cx="25.5" cy="21" rx="1.8" ry="2" fill="#1a0a0a"/>
+        <!-- Lashes hint -->
+        <line x1="17" y1="19.5" x2="15.5" y2="18" stroke="#1a0a0a" stroke-width="0.8"/>
+        <line x1="24" y1="19.5" x2="22.5" y2="18" stroke="#1a0a0a" stroke-width="0.8"/>
+        <!-- Outfit -->
+        <path d="M12 34 Q22 28 32 34 L34 44 H10 Z" fill="#c084fc"/>
+        <path d="M10 40 Q22 36 34 40 L34 44 H10 Z" fill="#9333ea"/>
+      </svg>
+    </a>
+
+    <!-- ADRIENNE -->
+    <a href="cadence-adrienne.html" class="member-icon" title="Adrienne">
+      <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <rect width="44" height="44" fill="#0e1a0e"/>
+        <!-- Adrienne: high ponytail, sharp sporty, yellow-green accent -->
+        <!-- Ponytail -->
+        <path d="M26 8 Q34 4 36 14 Q32 10 28 12 Z" fill="#2d3a10"/>
+        <path d="M27 10 Q38 12 36 28 Q30 18 28 14 Z" fill="#3a4a14"/>
+        <!-- Face -->
+        <ellipse cx="20" cy="22" rx="10" ry="10" fill="#f0d5a8"/>
+        <!-- Hair top / sides -->
+        <path d="M10 18 Q10 6 20 6 Q28 6 28 14 Q24 8 20 9 Q14 9 12 16 Z" fill="#2d3a10"/>
+        <rect x="10" y="16" width="4" height="14" rx="2" fill="#2d3a10"/>
+        <!-- Ponytail band -->
+        <circle cx="27" cy="10" r="2.5" fill="#ffd93d"/>
+        <!-- Eyes -->
+        <ellipse cx="16.5" cy="21" rx="1.8" ry="2" fill="#1a1a0a"/>
+        <ellipse cx="23.5" cy="21" rx="1.8" ry="2" fill="#1a1a0a"/>
+        <!-- Smirk/smile -->
+        <path d="M17 26 Q20 28.5 23 26" fill="none" stroke="#c07840" stroke-width="1.2" stroke-linecap="round"/>
+        <!-- Outfit / jacket collar -->
+        <path d="M10 34 Q20 28 30 34 L32 44 H8 Z" fill="#4a6a1a"/>
+        <path d="M8 40 Q20 37 32 40 L32 44 H8 Z" fill="#ffd93d"/>
+        <!-- Stripe -->
+        <line x1="8" y1="37.5" x2="32" y2="37.5" stroke="#ffd93d" stroke-width="1" opacity="0.5"/>
+      </svg>
+    </a>
+
+  </nav>
+
+  <!-- CHARACTER IMAGE -->
+  <div class="character-area">
+    <!--
+      Replace src below with the actual character PNG.
+      The image should be a full-body PNG with transparent background.
+      Recommended: tall portrait crop, character slightly off-center to left
+    -->
+    <img 
+      class="character-img" 
+      src="cherie.png" 
+      alt="Cherie"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+    >
+    <!-- Placeholder shown when no PNG is supplied -->
+    <div class="character-placeholder" style="display:none">
+      <svg viewBox="0 0 300 680" xmlns="http://www.w3.org/2000/svg" style="height:88vh;max-height:820px;filter:drop-shadow(-8px 0 40px rgba(240,96,160,0.35))">
+        <!-- Stylized character silhouette placeholder -->
+        <defs>
+          <radialGradient id="skinG" cx="50%" cy="40%" r="50%">
+            <stop offset="0%" stop-color="#fdd5b1"/>
+            <stop offset="100%" stop-color="#f5b882"/>
+          </radialGradient>
+        </defs>
+        <!-- Big curly hair -->
+        <ellipse cx="150" cy="110" rx="95" ry="85" fill="#f060a0"/>
+        <circle cx="80" cy="95" r="50" fill="#e8508c"/>
+        <circle cx="220" cy="95" r="50" fill="#e8508c"/>
+        <circle cx="60" cy="130" r="38" fill="#d84080"/>
+        <circle cx="240" cy="130" r="38" fill="#d84080"/>
+        <ellipse cx="150" cy="80" rx="75" ry="70" fill="#f9a8d4"/>
+        <!-- Face -->
+        <ellipse cx="150" cy="168" rx="52" ry="58" fill="url(#skinG)"/>
+        <!-- Eye wink left -->
+        <path d="M125 160 Q132 156 139 160" fill="none" stroke="#7a4520" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Eye right open -->
+        <ellipse cx="170" cy="160" rx="7" ry="8" fill="#4a2410"/>
+        <circle cx="172" cy="158" r="2" fill="white"/>
+        <!-- Nose -->
+        <ellipse cx="150" cy="175" rx="4" ry="2.5" fill="#e89060"/>
+        <!-- Smile -->
+        <path d="M135 185 Q150 196 165 185" fill="none" stroke="#c05040" stroke-width="2" stroke-linecap="round"/>
+        <!-- Neck -->
+        <rect x="138" y="220" width="24" height="24" rx="10" fill="url(#skinG)"/>
+        <!-- Arms -->
+        <path d="M100 270 Q60 290 50 350 Q55 355 65 350 Q75 305 108 285 Z" fill="#b8d0f0"/>
+        <path d="M200 270 Q240 290 255 360 Q246 368 238 360 Q226 308 192 285 Z" fill="#f9c8e8"/>
+        <!-- Hands -->
+        <ellipse cx="58" cy="356" rx="14" ry="12" fill="url(#skinG)"/>
+        <ellipse cx="244" cy="364" rx="14" ry="12" fill="url(#skinG)"/>
+        <!-- Body / top -->
+        <path d="M100 244 Q150 234 200 244 L215 330 Q150 318 85 330 Z" fill="#f9c8e8"/>
+        <!-- Collar -->
+        <path d="M138 244 L150 264 L162 244" fill="none" stroke="#e890b0" stroke-width="2"/>
+        <!-- Skirt -->
+        <path d="M82 328 Q150 316 218 328 L235 520 Q150 508 65 520 Z" fill="#f9a8d4"/>
+        <!-- Plaid lines on skirt -->
+        <g stroke="#e060a0" stroke-width="1.5" opacity="0.5">
+          <line x1="90" y1="328" x2="76" y2="520"/>
+          <line x1="115" y1="322" x2="104" y2="520"/>
+          <line x1="140" y1="318" x2="132" y2="520"/>
+          <line x1="165" y1="318" x2="160" y2="520"/>
+          <line x1="190" y1="322" x2="192" y2="520"/>
+          <line x1="210" y1="328" x2="218" y2="520"/>
+        </g>
+        <g stroke="#e060a0" stroke-width="1" opacity="0.3">
+          <line x1="68" y1="370" x2="232" y2="364"/>
+          <line x1="70" y1="400" x2="230" y2="395"/>
+          <line x1="68" y1="430" x2="232" y2="428"/>
+          <line x1="66" y1="460" x2="234" y2="460"/>
+          <line x1="65" y1="490" x2="235" y2="492"/>
+        </g>
+        <!-- Legs -->
+        <rect x="112" y="516" width="26" height="100" rx="12" fill="#fce4d0"/>
+        <rect x="162" y="516" width="26" height="100" rx="12" fill="#fce4d0"/>
+        <!-- Shoes -->
+        <ellipse cx="125" cy="618" rx="20" ry="10" fill="#d84080"/>
+        <ellipse cx="175" cy="618" rx="20" ry="10" fill="#d84080"/>
+        <!-- Socks -->
+        <rect x="112" y="600" width="26" height="18" rx="8" fill="white"/>
+        <rect x="162" y="600" width="26" height="18" rx="8" fill="white"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- INFO PANEL -->
+  <aside class="info-panel">
+    <p class="member-role">Dancer · Vocalist</p>
+    <h1 class="member-name">Cherie</h1>
+    <p class="member-bio">
+      The group's wildcard energy, Cherie brings an irresistible warmth to every stage.
+      Known for her expressive choreography and larger-than-life presence, she turns every
+      performance into a conversation — chaotic, charming, and completely unforgettable.
+    </p>
+
+    <div class="member-stats">
+      <div class="stat-row">
+        <span style="width:70px">Dance</span>
+        <div class="stat-bar-wrap"><div class="stat-bar" style="width:92%"></div></div>
+        <span style="width:28px;text-align:right">92</span>
+      </div>
+      <div class="stat-row">
+        <span style="width:70px">Vocals</span>
+        <div class="stat-bar-wrap"><div class="stat-bar" style="width:78%;animation-delay:1.1s"></div></div>
+        <span style="width:28px;text-align:right">78</span>
+      </div>
+      <div class="stat-row">
+        <span style="width:70px">Rap</span>
+        <div class="stat-bar-wrap"><div class="stat-bar" style="width:55%;animation-delay:1.2s"></div></div>
+        <span style="width:28px;text-align:right">55</span>
+      </div>
+      <div class="stat-row">
+        <span style="width:70px">Charm</span>
+        <div class="stat-bar-wrap"><div class="stat-bar" style="width:99%;animation-delay:1.3s"></div></div>
+        <span style="width:28px;text-align:right">99</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- BOTTOM BAR -->
+  <footer class="bottom-bar">
+    <a href="cadence-adrienne.html" class="nav-arrow" title="Previous member">‹</a>
+    <span class="member-count">01 / 04 &nbsp;·&nbsp; Cherie</span>
+    <a href="cadence-mika.html" class="nav-arrow" title="Next member">›</a>
+    <div class="social-links">
+      <a href="#" class="social-link">Instagram</a>
+      <a href="#" class="social-link">TikTok</a>
+      <a href="#" class="social-link">Weverse</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
