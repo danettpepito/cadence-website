@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Loading Screen</title>
+
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+    background: #0f0f0f; /* change if you want */
+    font-family: Arial, sans-serif;
+  }
+
+  /* Loading overlay */
+  #loader {
+    position: fixed;
+    inset: 0;
+    background: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+    transition: opacity 0.8s ease;
+  }
+
+  /* Logo */
+  #loader img {
+    width: 180px; /* adjust size */
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+
+  /* Optional text */
+  #loader p {
+    color: white;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.7; }
+  }
+
+  .fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <img src="assets/logo.png" alt="Cadence Logo">
+  <p>Loading</p>
+</div>
+
+<!-- YOUR SITE CONTENT -->
+<div id="content">
+  <h1 style="color:white;">Your site goes here</h1>
+</div>
+
+<script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+      loader.classList.add("fade-out");
+    }, 1000); // delay before fade out
+  });
+</script>
+
+</body>
+</html>

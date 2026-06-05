@@ -10,6 +10,7 @@
     font-family: 'DM Sans', sans-serif;
     color: var(--text);
     overflow: hidden;
+    background: url("assets/nadia-bg.png") center/120% no-repeat;;
   }
 
   /* ── LAYOUT ── */
@@ -81,8 +82,8 @@
 }
 
 .member-icon.active .member-square{
-    border-color: #ff4fa3;
-    background: rgba(255,79,163,0.2);
+    border-color: blue;
+    background: rgba(26, 26, 92, 0.376);
 }
 
   /* ── CHARACTER AREA ── */
@@ -123,7 +124,12 @@
     padding: 48px 52px 48px 32px;
     z-index: 10;
     position: relative;
+    
   }
+
+  .info-panel {
+    padding-right: 140px;
+    }
 
   /* pink diagonal block */
   .info-panel::before {
@@ -206,16 +212,20 @@
     margin-top:20px;
   }
   
-  .member-image-panel img{
-    height:120vh;
-    width:auto;
-
-    position:absolute;
-    bottom:-20px;
-    left:50%;
-    transform:translateX(-50%);
-
+  .member-image-panel img {
+    height: 125vh;
+    width: auto;
+    
+    position: absolute;
+    bottom: -100px;
+    left: 40%;
+    
+    transform: translateX(-50%) translateY(20px) scale(1.05);
+    
     filter: drop-shadow(-8px 0 40px rgba(240,96,160,0.35));
-
     animation: float 6s ease-in-out infinite;
-}
+    }
+
+.logo-area img {
+    height: 100px;
+        }
